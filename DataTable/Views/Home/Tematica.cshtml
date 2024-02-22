@@ -1,0 +1,57 @@
+﻿ @model IEnumerable<DataTable.Models.Empresas>
+
+<div class="text-center">
+    <h1 class="display-4">Empresas</h1>
+
+    <div class="tabelas">
+        <div class="tabela tematica">
+            <table id="tableUni" class="display">
+                <thead class="cabecalho">
+                    <tr>
+                        <th>RazaoSocial </th>
+                        <th>NomeFantasia </th>
+                        <th>Ativo </th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.RazaoSocial </td>
+                            <td>@item.NomeFantasia  </td>
+                            <td>@item.Ativo  </td>
+                            <td>ICONE</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        var table = new DataTable('#tableUni', {
+            language: { url: "https://cdn.datatables.net/plug-ins/1.11.5/i18n/Portuguese-Brasil.json" },
+            searching: false,
+            lengthMenu: [5, 10, 15, 20, 50, 100],
+            paging: true, // Ativa a paginação
+            searching: true, // Ativa a pesquisa
+            ordering: false,
+            language: {
+                lengthMenu: 'Apresentar _MENU_ linhas por página',
+                zeroRecords: 'Não há Registros',
+                info: 'Página _PAGE_ de _PAGES_',
+                infoEmpty: 'Não há Registros',
+                infoFiltered: '(Filtrando de _MAX_ registros)',
+                searchPlaceholder: "Filtre por nome ou email",
+                search: 'Pesquisar:',
+                paginate: {
+                    next: '<i class="fa-solid fa-angle-right color-red"></i>',
+                    previous: '<i class="fa-solid fa-angle-left color-red"></i>',
+                },
+            },
+        });
+    </script>
+}

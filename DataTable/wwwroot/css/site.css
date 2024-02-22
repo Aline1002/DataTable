@@ -1,0 +1,49 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.tabelas {
+    margin-top:20px;
+}
+
+.tematica {
+    background-color:  #F2EDE4;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.cabecalho {
+    margin-top: 40px;
+    background-color: #95BFB8
+}
+
+#tableUni_length {
+    margin-bottom: 40px;
+}
+
+/* botão de paginação ativo */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #95BFB8 !important;
+    font-weight: bold;
+    border: 1px solid #95BFB8;
+}
+

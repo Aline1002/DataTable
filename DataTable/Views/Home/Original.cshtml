@@ -1,0 +1,102 @@
+﻿@{
+    ViewData["Title"] = "DataTable Original";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<div class="text-center">
+    <h1 class="display-4">Livros</h1>
+    <div class="tabelas">
+        <div class="tabela">
+            <table id="tableUni" class="display">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Autor</th>
+                        <th>Ano</th>
+                        <th class="editing" style="text-align: center;">Editar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Trono de Vidro</td>
+                        <td>Sarah J. Maas</td>
+                        <td>2013</td>
+                        <td class="acoes-normas">
+                            <a style="border:none; background-color: transparent;">
+                                <i class="fa-solid fa-user-pen color-red"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Corte de chamas prateadas</td>
+                        <td>Sarah J. Maas</td>
+                        <td>2021</td>
+                        <td class="acoes-normas">
+                            <a style="border:none; background-color: transparent;">
+                                <i class="fa-solid fa-user-pen color-red"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Amor, teoricamente</td>
+                        <td>Ali Hazelwood</td>
+                        <td>2023</td>
+                        <td class="acoes-normas">
+                            <a style="border:none; background-color: transparent;">
+                                <i class="fa-solid fa-user-pen color-red"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Todas as suas (im)perfeições</td>
+                        <td>Colleen Hoover</td>
+                        <td>2019</td>
+                        <td class="acoes-normas">
+                            <a style="border:none; background-color: transparent;">
+                                <i class="fa-solid fa-user-pen color-red"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Saboroso Cadáver</td>
+                        <td>Agustina Bazterrica</td>
+                        <td>2022</td>
+                        <td class="acoes-normas">
+                            <a style="border:none; background-color: transparent;">
+                                <i class="fa-solid fa-user-pen color-red"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        var table = new DataTable('#tableUni', {
+            language: { url: "https://cdn.datatables.net/plug-ins/1.11.5/i18n/Portuguese-Brasil.json" },
+            searching: false,
+            lengthMenu: [5, 10, 15, 20, 50, 100],
+            paging: true, // Ativa a paginação
+            searching: true, // Ativa a pesquisa
+            ordering: false,
+            language: {
+                lengthMenu: 'Apresentar _MENU_ linhas por página',
+                zeroRecords: 'Não há Registros',
+                info: 'Página _PAGE_ de _PAGES_',
+                infoEmpty: 'Não há Registros',
+                infoFiltered: '(Filtrando de _MAX_ registros)',
+                searchPlaceholder: "Filtre por nome ou email",
+                search: 'Pesquisar:',
+                paginate: {
+                    next: '<i class="fa-solid fa-angle-right color-red"></i>',
+                    previous: '<i class="fa-solid fa-angle-left color-red"></i>',
+                },
+            },
+        });
+
+    </script>
+}

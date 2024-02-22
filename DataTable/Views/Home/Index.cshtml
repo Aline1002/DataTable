@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4" style="margin: 30px;">Bem-vindos!</h1>
+    <div>
+        <h3>Nesse projeto mostro um pouco sobre a utilização do DataTable</h3>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Biblioteca
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Link da biblioteca para fácil acesso</p>
+                        <a href="https://datatables.net/">Link da biblioteca</a>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Detalhes Importantes
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ol>
+                            <li>Não esqueça de ter os links ou arquivos corretos.</li>
+                            <li>Para que funcione você deve ter jQuery.</li>
+                            <li>O id da tabela deve ser sempre o mesmo em: new DataTable('#.</li>
+                            <li>Obviamente, devem haver sempre o mesmo numéro de colunas no  th e tr</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Dica
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <p>Eu costumava ter um erro frequente:</p>
+                        <p>
+                            System.NullReferenceException: 'Object reference not set to an instance of an object.'
+                        </p>
+                        <br />
+                        Geralmente é porque alguma informação que precisa ser acessada na tela não esta na lista enviada pelo controller, é muito importante conferir se as informações enviadas estão corretas.
+                        <p>Espero que vocês tenham menos contato com esse problema do que eu tive! Bom desenvolvimento!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
